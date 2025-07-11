@@ -22,7 +22,7 @@
 
         <!-- Login -->
         <div class="w-full lg:w-1/2 min-h-screen bg-white text-black flex flex-col justify-center items-center">
-            @livewire('auth.register')
+            @livewire('auth.login')
         </div>
     </div>
 </body>
