@@ -19,24 +19,24 @@
                 <div class="flex flex-row justify-evenly">
                     <!-- input code 1 -->
                     <div class="w-16 h-14 flex items-center rounded-lg border border-[#53AD9F] bg-white px-4 py-3 sm:px-6 sm:py-4 mb-10 sm:mb-12 sm:mr-2">
-                        <input type="text" wire:model="password" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base text-center">
+                        <input type="text" wire:model="code1" maxlength="1" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base text-center">
                     </div>
-                    <!-- input code 1 -->
+                    <!-- input code 2 -->
                     <div class="w-16 h-14 flex items-center rounded-lg border border-[#53AD9F] bg-white px-4 py-3 sm:px-6 sm:py-4 mb-10 sm:mb-12">
-                        <input type="text" wire:model="password" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base text-center">
+                        <input type="text" wire:model="code2" maxlength="1" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base text-center">
                     </div>
-                    <!-- input code 1 -->
+                    <!-- input code 3 -->
                     <div class="w-16 h-14 flex items-center rounded-lg border border-[#53AD9F] bg-white px-4 py-3 sm:px-6 sm:py-4 mb-10 sm:mb-12 sm:mr-2">
-                        <input type="text" wire:model="password" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base text-center">
+                        <input type="text" wire:model="code3" maxlength="1" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base text-center">
                     </div>
-                    <!-- input code 1 -->
+                    <!-- input code 4 -->
                     <div class="w-16 h-14 flex items-center rounded-lg border border-[#53AD9F] bg-white px-4 py-3 sm:px-6 sm:py-4 mb-10 sm:mb-12">
-                        <input type="text" wire:model="password" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base text-center">
+                        <input type="text" wire:model="code4" maxlength="1" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base text-center">
                     </div>
                 </div>
 
                 <!-- Submit button -->
-                <button wire:click.prevent="login" class="w-full bg-[#53AD9F] text-white px-4 py-3 sm:px-6 sm:py-4 rounded-3xl hover:bg-[#3a8f7c] transition duration-300 mb-4 text-sm sm:text-base">
+                <button wire:click.prevent="verifyCode" class="w-full bg-[#53AD9F] text-white px-4 py-3 sm:px-6 sm:py-4 rounded-3xl hover:bg-[#3a8f7c] transition duration-300 mb-4 text-sm sm:text-base">
                     Kirim
                 </button>
             </form>

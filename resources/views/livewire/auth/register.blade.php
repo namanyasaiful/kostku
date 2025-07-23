@@ -15,7 +15,13 @@
                     <h1 class="text-3xl sm:text-3xl font-semibold mb-4 text-center">Register</h1>
                     <p class="text-lg sm:text-lg font-normal mb-10 sm:mb-14 text-center">Buat username dan password, serta masukkan kode referral untuk register</p>
 
-                    <!-- input username -->
+                    <!-- input name -->
+                    <div class="w-full flex items-center rounded-3xl border border-[#53AD9F] bg-white px-4 py-3 sm:px-6 sm:py-3 mb-2">
+                        <img src="{{ asset('assets/username.png') }}" alt="Logo" class="w-6 h-6 sm:w-6 sm:h-6 mr-3 sm:mr-4">
+                        <input type="text" wire:model="name" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Masukkan nama anda">
+                    </div>
+
+                    <!-- input email -->
                     <div class="w-full flex items-center rounded-3xl border border-[#53AD9F] bg-white px-4 py-3 sm:px-6 sm:py-3 mb-2">
                         <img src="{{ asset('assets/username.png') }}" alt="Logo" class="w-6 h-6 sm:w-6 sm:h-6 mr-3 sm:mr-4">
                         <input type="email" wire:model="email" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Masukkan email anda">
@@ -30,18 +36,18 @@
                     <!-- input No. Telp -->
                     <div class="w-full flex items-center rounded-3xl border border-[#53AD9F] bg-white px-4 py-3 sm:px-6 sm:py-3 mb-2">
                         <img src="{{ asset('assets/phone.png') }}" alt="Logo" class="w-6 h-6 sm:w-6 sm:h-6 mr-3 sm:mr-4">
-                        <input type="number" wire:model="number" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Masukkan nomor telepon anda">
+                        <input type="number" wire:model="telp" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Masukkan nomor telepon anda">
                     </div>
 
                     <!-- input kode referal -->
                     <div class="w-full flex items-center rounded-3xl border border-[#53AD9F] bg-white px-4 py-3 sm:px-6 sm:py-3 mb-10">
                         <img src="{{ asset('assets/verified.png') }}" alt="Logo" class="w-6 h-6 sm:w-6 sm:h-6 mr-3 sm:mr-4">
-                        <input type="number" wire:model="number" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Masukkan kode referral">
+                        <input type="text" wire:model="referralCode" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Masukkan kode referral">
                     </div>
 
 
-                    <!-- login button -->
-                    <button wire:click.prevent="login" class="w-full bg-[#53AD9F] text-white px-4 py-3 sm:px-6 sm:py-4 rounded-3xl hover:bg-[#3a8f7c] transition duration-300 mb-4 text-sm sm:text-base">
+                    <!-- register button -->
+                    <button wire:click.prevent="register" class="w-full bg-[#53AD9F] text-white px-4 py-3 sm:px-6 sm:py-4 rounded-3xl hover:bg-[#3a8f7c] transition duration-300 mb-4 text-sm sm:text-base">
                         Register
                     </button>
 

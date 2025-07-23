@@ -23,11 +23,11 @@
                 <!-- Konfirmasi new password -->
                 <div class="w-full flex items-center rounded-3xl border border-[#53AD9F] bg-white px-4 py-3 sm:px-6 sm:py-4 mb-10 sm:mb-12">
                     <img src="{{ asset('assets/password.png') }}" alt="Logo" class="w-6 h-6 sm:w-6 sm:h-6 mr-3 sm:mr-4">
-                    <input type="password" wire:model="password" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Konfirmasi password anda">
+                    <input type="password" wire:model="password_confirmation" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Konfirmasi password anda">
                 </div>
 
                 <!-- Submit button -->
-                <button wire:click.prevent="login" class="w-full bg-[#53AD9F] text-white px-4 py-3 sm:px-6 sm:py-4 rounded-3xl hover:bg-[#3a8f7c] transition duration-300 mb-4 text-sm sm:text-base">
+                <button wire:click.prevent="updatePassword" class="w-full bg-[#53AD9F] text-white px-4 py-3 sm:px-6 sm:py-4 rounded-3xl hover:bg-[#3a8f7c] transition duration-300 mb-4 text-sm sm:text-base">
                     Simpan
                 </button>
             </form>

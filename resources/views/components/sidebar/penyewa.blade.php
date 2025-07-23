@@ -23,7 +23,7 @@
         </li>
     </ul>
 
-    <form method="POST" action="{{ route('logout') }}" class="mt-8">
+    {{-- <form method="POST" action="{{ route('logout') }}" class="mt-8"> --}}
         @csrf
         <button type="submit" class="w-full flex items-center p-2 hover:bg-red-600 rounded">
             🔴 Logout
