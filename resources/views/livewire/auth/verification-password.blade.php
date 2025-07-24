@@ -35,6 +35,7 @@
                     </div>
                 </div>
 
+                <input type="hidden" wire:model="phone" name="phone" value="{{ request()->phone }}">
                 <!-- Submit button -->
                 <button wire:click.prevent="verifyCode" class="w-full bg-[#53AD9F] text-white px-4 py-3 sm:px-6 sm:py-4 rounded-3xl hover:bg-[#3a8f7c] transition duration-300 mb-4 text-sm sm:text-base">
                     Kirim

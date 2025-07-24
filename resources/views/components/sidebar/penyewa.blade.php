@@ -1,4 +1,4 @@
-<!-- resources/views/components/sidebar/pengelola.blade.php -->
+<!-- resources/views/components/sidebar/penyewa.blade.php -->
 <nav class="w-64 bg-green-600 text-white min-h-screen p-4">
     <div class="mb-8 text-center">
         <h2 class="text-xl font-bold">MENU PENYEWA</h2>
@@ -23,7 +23,7 @@
         </li>
     </ul>
 
-    {{-- <form method="POST" action="{{ route('logout') }}" class="mt-8"> --}}
+    <form method="POST" action="{{ route('logout') }}" class="mt-8">
         @csrf
         <button type="submit" class="w-full flex items-center p-2 hover:bg-red-600 rounded">
             🔴 Logout

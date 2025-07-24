@@ -28,7 +28,7 @@
                     <!-- input username -->
                     <div class="w-full flex items-center rounded-3xl border border-[#53AD9F] bg-white px-4 py-3 sm:px-6 sm:py-3 mb-4 sm:mb-6">
                         <img src="{{ asset('assets/username.png') }}" alt="Logo" class="w-6 h-6 sm:w-8 sm:h-8 mr-3 sm:mr-4">
-                        <input type="email" wire:model="email" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Masukkan email anda" required>
+                        <input type="text" wire:model="username" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Masukkan username anda" required>
                     </div>
 
                     <!-- input password -->
@@ -39,7 +39,7 @@
 
                     <!-- forget password -->
                     <div class="flex justify-end items-center mb-6 sm:mb-8 w-full">
-                        <a href="#" class="text-xs sm:text-sm font-normal text-[#53AD9F] hover:text-[#3a8f7c] transition duration-300 ease-in-out">Lupa password?</a>
+                        <a href="{{route('forgot-password')}}" class="text-xs sm:text-sm font-normal text-[#53AD9F] hover:text-[#3a8f7c] transition duration-300 ease-in-out">Lupa password?</a>
                     </div>
 
                     <!-- login button -->
@@ -57,4 +57,10 @@
                 </form>
         </div>
     </div>
+
+    <script>
+        window.addEventListener('already-logged-in', event => {
+            alert(event.detail.message);
+        });
+    </script>
 </div>

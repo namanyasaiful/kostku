@@ -26,6 +26,7 @@
                     <input type="password" wire:model="password_confirmation" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Konfirmasi password anda">
                 </div>
 
+                <input type="hidden" wire:model="phone" name="phone" value="{{ request()->phone }}">
                 <!-- Submit button -->
                 <button wire:click.prevent="updatePassword" class="w-full bg-[#53AD9F] text-white px-4 py-3 sm:px-6 sm:py-4 rounded-3xl hover:bg-[#3a8f7c] transition duration-300 mb-4 text-sm sm:text-base">
                     Simpan

@@ -11,25 +11,39 @@ class Login extends Component
     // Tentukan layout yang dipakai oleh komponen ini
     public string $layout = 'components.layouts.auth';
 
-    public $email = '';
+    public $username = '';
     public $password = '';
 
     protected $rules = [
-        'email' => 'required|email',
+        'username' => 'required|string',
         'password' => 'required|min:6',
     ];
 
     public function login()
     {
+        if (Auth::check()) {
+            $this->dispatchBrowserEvent('already-logged-in', ['message' => 'Anda sudah login, silakan logout terlebih dahulu.']);
+            return;
+        }
+
         $this->validate();
 
-        if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
+        if (Auth::attempt(['username' => $this->username, 'password' => $this->password])) {
             session()->regenerate();
-            return redirect()->intended(route('dashboard.pengelola'));
+
+            $user = Auth::user();
+            if ($user->role === 'pengelola') {
+                return redirect()->intended(route('dashboard.pengelola'));
+            } elseif ($user->role === 'penyewa') {
+                return redirect()->intended(route('dashboard.penyewa'));
+            } else {
+                // Default redirect if role is not recognized
+                return redirect()->intended(route('login'));
+            }
         }
 
         throw ValidationException::withMessages([
-            'email' => __('auth.failed'),
+            'username' => __('auth.failed'),
         ]);
     }
 

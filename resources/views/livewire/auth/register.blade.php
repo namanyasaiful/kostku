@@ -18,13 +18,7 @@
                     <!-- input name -->
                     <div class="w-full flex items-center rounded-3xl border border-[#53AD9F] bg-white px-4 py-3 sm:px-6 sm:py-3 mb-2">
                         <img src="{{ asset('assets/username.png') }}" alt="Logo" class="w-6 h-6 sm:w-6 sm:h-6 mr-3 sm:mr-4">
-                        <input type="text" wire:model="name" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Masukkan nama anda">
-                    </div>
-
-                    <!-- input email -->
-                    <div class="w-full flex items-center rounded-3xl border border-[#53AD9F] bg-white px-4 py-3 sm:px-6 sm:py-3 mb-2">
-                        <img src="{{ asset('assets/username.png') }}" alt="Logo" class="w-6 h-6 sm:w-6 sm:h-6 mr-3 sm:mr-4">
-                        <input type="email" wire:model="email" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Masukkan email anda">
+                        <input type="text" wire:model="username" class="w-full focus:outline-none focus:ring-0 text-sm sm:text-base" placeholder="Masukkan username anda">
                     </div>
 
                     <!-- input password -->
@@ -55,7 +49,7 @@
                     <div class="flex justify-center items-center">
                         <p class="text-xs sm:text-sm font-extralight text-black">
                             Sudah punya akun?
-                            <span><a href="/" class="font-semibold text-[#53AD9F] hover:text-[#3a8f7c] transition duration-300 ease-in-out">Login</a></span>
+                            <span><a href="/login" class="font-semibold text-[#53AD9F] hover:text-[#3a8f7c] transition duration-300 ease-in-out">Login</a></span>
                         </p>
                     </div>
                 </form>
