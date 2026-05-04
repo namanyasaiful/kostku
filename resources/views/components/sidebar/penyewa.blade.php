@@ -1,6 +1,6 @@
 <!-- resources/views/components/sidebar/penyewa.blade.php -->
 <nav class="w-64 bg-green-600 text-white min-h-screen p-4">
-    <div class="mb-8 text-center">
+    {{-- <div class="mb-8 text-center">
         <h2 class="text-xl font-bold">MENU PENYEWA</h2>
         <p class="text-sm">{{ auth()->user()->name }}</p>
     </div>
@@ -28,5 +28,6 @@
         <button type="submit" class="w-full flex items-center p-2 hover:bg-red-600 rounded">
             🔴 Logout
         </button>
-    </form>
+    </form> --}}
+    <div/
 </nav>
